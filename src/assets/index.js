@@ -1,5 +1,5 @@
 import logo from "./spotifyLogo.png";
-import logo from "./spotifyLogo.png";
-import logoFull from "./spotifyFullLogo.jpg";
+import logoFull from "./logo.png";
+import loaderImg from "./loader.svg";
 
-export { logo, logoFull };
+export { logo, logoFull, loaderImg };
