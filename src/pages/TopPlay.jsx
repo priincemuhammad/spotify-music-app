@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import Error from "../components/Error";
 import Loader from "../components/Loader";
+import { useRef, useEffect } from "react";
 
 const TopChartCard = ({
   song,
@@ -19,7 +20,6 @@ const TopChartCard = ({
   handlePlay,
   data,
 }) => {
-  console.log(song);
   return (
     <div className="w-full flex flex-row items-center hover:bg-[#158b68be] py-2 p-1 rounded-lg cursor-pointer mb-2">
       <h3 className="font-bold text-base text-white mr-3">{i + 1}.</h3>
@@ -78,6 +78,9 @@ const TopPlay = () => {
       <div className="w-full flex flex-col">
         <div className="flex flex-row justify-between items-center">
           <h2 className="text-white font-bold text-2xl ">Top Charts</h2>
+          <Link to={"/top-charts"}>
+            <p className="text-gray-300 text-base cursor-pointer">See more</p>
+          </Link>
         </div>
 
         <div className="mt-4 flex flex-col gap-1">

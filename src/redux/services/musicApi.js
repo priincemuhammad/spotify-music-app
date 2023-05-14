@@ -19,7 +19,7 @@ export const musicApi = createApi({
     getSongDetails: builder.query({
       query: (songid) => `/songs/get-details?key=${songid}`,
     }),
-    getSongRelated: builder.query({
+    getRelatedSongs: builder.query({
       query: (songid) =>
         `/shazam-songs/list-similarities?id=track-similarities-id-${songid}`,
     }),
@@ -35,7 +35,7 @@ export const musicApi = createApi({
 export const {
   useGetTopChartsQuery,
   useGetSongDetailsQuery,
-  useGetSongRelatedQuery,
+  useGetRelatedSongsQuery,
   useGetArtistDetailsQuery,
   useGetSongsBySearchQuery,
 } = musicApi;
