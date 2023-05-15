@@ -10,8 +10,6 @@ const CountryTracks = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data, isFetching, error } = useGetSongsByCountryQuery(countryCode);
 
-  console.log(data);
-
   useEffect(() => {
     // my apikey = at_0HUOauUSQNKKIGv5U6LgRVaL5LIdj
     axios

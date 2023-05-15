@@ -7,8 +7,6 @@ const TopCharts = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
   const { data, isFetching, error } = useGetTopChartsQuery();
 
-  console.log(data);
-
   if (isFetching) return <Loader title="Loading Top Charts..." />;
 
   if (error) return <Error />;
