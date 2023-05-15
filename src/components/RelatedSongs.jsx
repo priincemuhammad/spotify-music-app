@@ -8,8 +8,6 @@ const RelatedSongs = ({
   handlePlay,
   artistId,
 }) => {
-  console.log(data);
-
   return (
     <div className="flex flex-col">
       <h1 className="font-bold text-3xl text-white">Related Songs:</h1>

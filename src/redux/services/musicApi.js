@@ -26,6 +26,10 @@ export const musicApi = createApi({
     getArtistDetails: builder.query({
       query: (artistid) => `/artists/get-summary?id=${artistid}`,
     }),
+    getSongsByCountry: builder.query({
+      query: (countryCode) =>
+        `/charts/get-top-songs-in-country?country_code=${countryCode}`,
+    }),
     getSongsBySearch: builder.query({
       query: (searchTerm) => `/search?term=${searchTerm}`,
     }),
@@ -38,4 +42,5 @@ export const {
   useGetRelatedSongsQuery,
   useGetArtistDetailsQuery,
   useGetSongsBySearchQuery,
+  useGetSongsByCountryQuery,
 } = musicApi;
