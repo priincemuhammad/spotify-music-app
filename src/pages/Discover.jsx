@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Error, Loader, SongCard } from "../components";
 import { genres } from "../assets/constants";
 import { useGetTopChartsQuery } from "../redux/services/musicApi";
@@ -10,7 +9,7 @@ const Discover = () => {
   const { activeSong, isPlaying, genreListId } = useSelector(
     (state) => state.player
   );
-  const { data, isFetching, error } = useGetTopChartsQuery(40);
+  const { data, isFetching, error } = useGetTopChartsQuery(20);
 
   const genreTitle = genres.find(({ value }) => value === genreListId)?.title;
 
